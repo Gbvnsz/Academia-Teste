@@ -20,18 +20,108 @@ img {
     height: auto;
 }
 
-/* Media para telas maiores */
-@media (min-width: 600px) {
+/* Media query para telas menores */
+@media (max-width: 600px) {
     body {
-        font-size: 18px;
-        padding: 20px;
+        font-size: 14px; /* Tamanho de fonte menor para telas pequenas */
     }
 }
 
-/* Media para tablets e dispositivos maiores */
-@media (min-width: 768px) {
+/* Media query para telas maiores */
+@media (min-width: 601px) and (max-width: 768px) {
     body {
-        font-size: 20px;
+        font-size: 16px; /* Tamanho de fonte padrão para tablets */
+    }
+}
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+            font-size: 18px; /* Tamanho de fonte maior para desktops */
+        }
+
+    .conteiner {
+        flex-direction: column; /* Muda o layout para coluna */
+        align-items: center; /* Centraliza os itens */
+        width: 100%; /* Ajusta a largura para 100% */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    .conteiner3 {
+        flex-direction: column; /* Muda o layout para coluna */
+        align-items: center; /* Centraliza os itens */
+        width: 100%; /* Ajusta a largura para 100% */
+    }
+
+    aside {
+        width: 100%; /* Ajusta a largura do aside para 100% */
+        margin-top: 20px; /* Adiciona margem superior */
+    }
+
+    .textoepaginas {
+        flex-direction: column; /* Muda o layout para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .Paginas {
+        flex-direction: column; /* Muda o layout para coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 20px; /* Ajusta o espaçamento entre os itens */
+    }
+
+    .Pags {
+        width: 90%; /* Ajusta a largura das páginas para 90% */
+    }
+
+    .rodape {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+        margin: 20px 0; /* Ajusta a margem */
+    }
+
+    .paginaft {
+        width: 100%; /* Ajusta a largura para 100% */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 20px; /* Adiciona margem inferior */
+    }
+}
+
+/* Media query para telas menores que 480px */
+@media (max-width: 480px) {
+    .conteiner {
+        padding: 5px; /* Reduz ainda mais o padding */
+    }
+
+    .parte3 {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+
+    .money {
+        margin: 10px; /* Ajusta a margem */
+    }
+
+    .money h3 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+
+    .money h4 {
+        font-size: 1rem; /* Reduz o tamanho do preço */
+    }
+
+    footer {
+        padding: 10px; /* Reduz o padding */
+    }
+
+    .rodape {
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .paginaft h3 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+
+    .paginaft p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
     }
 }
 
@@ -284,10 +374,16 @@ aside img {
     margin: 0 auto;
 }
 
+.animate {
+    transition: transform 0.5s ease;
+    transform: translateY(0);
+}
+
 .part3 {
     position: relative;
     width: 100%;
     height: 400px;
+    transform: translateY(20px);
 }
 
 .part3 a {

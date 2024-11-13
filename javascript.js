@@ -1,13 +1,9 @@
 // Animação de rolar a pági
-window.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.fade-in');
-    const windowHeight = window.innerHeight;
-
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - 100) {
-            element.classList.add('visible');
-        }
-    });
+document.addEventListener('scroll', function() {
+    const section = document.querySelector('.parte3');
+    if (window.scrollY > 100) {
+        section.classList.add('animate');
+    } else {
+        section.classList.remove('animate');
+    }
 });
