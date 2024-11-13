@@ -14,23 +14,24 @@ body {
     flex-direction: column;
 }
 
-/* Media para dispositivos com largura máxima de 600px */
-@media (max-width: 600px) {
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media para telas maiores */
+@media (min-width: 600px) {
     body {
-        background-color: lightblue; /* Muda a cor de fundo para azul claro em telas pequenas */
-    }
-    h1 {
-        font-size: 20px; /* Reduz o tamanho da fonte do cabeçalho */
+        font-size: 18px;
+        padding: 20px;
     }
 }
 
 /* Media para tablets e dispositivos maiores */
 @media (min-width: 768px) {
     body {
-        font-size: 18px; /* Aumenta o tamanho da fonte em telas maiores */
-    }
-    h1 {
-        font-size: 28px; /* Aumenta o tamanho da fonte do cabeçalho em telas maiores */
+        font-size: 20px;
     }
 }
 
@@ -522,7 +523,7 @@ aside img {
 .comentarios {
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     padding: 20px;
 }
